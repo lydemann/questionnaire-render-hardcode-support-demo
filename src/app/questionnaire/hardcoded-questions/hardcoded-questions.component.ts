@@ -7,7 +7,7 @@ import {
 import { HardcodedQuestionService as HardcodedQuestionsService } from './hardcoded-questions.service';
 
 @Component({
-  selector: 'app-hardcoded-question',
+  selector: 'app-hardcoded-questions',
   templateUrl: './hardcoded-questions.component.html',
   styleUrls: ['./hardcoded-questions.component.scss']
 })

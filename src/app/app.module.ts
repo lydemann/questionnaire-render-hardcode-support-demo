@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
+import { QuestionnaireSectionComponent } from './questionnaire-section/questionnaire-section.component';
+import { QuestionComponent } from './question/question.component';
+import { QuestionFormGeneratorService } from './questionnaire-section/question-form-generator.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuestionnaireComponent,
+    QuestionnaireSectionComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [QuestionFormGeneratorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

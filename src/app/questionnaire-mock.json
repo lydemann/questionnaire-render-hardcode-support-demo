@@ -14,9 +14,7 @@
             "answerType": "FreeText",
             "answerOptions": [],
             "enableCriteria": [],
-            "validationRules": [
-              "Required"
-            ]
+            "validationRules": ["Required"]
           },
           {
             "externalQuestionId": "Question2",
@@ -38,9 +36,7 @@
               }
             ],
             "enableCriteria": [],
-            "validationRules": [
-              "Required"
-            ]
+            "validationRules": ["Required"]
           },
           {
             "externalQuestionId": "Question3",
@@ -58,9 +54,7 @@
               }
             ],
             "enableCriteria": [],
-            "validationRules": [
-              "Required"
-            ]
+            "validationRules": ["Required"]
           },
           {
             "externalQuestionId": "Question4",
@@ -82,9 +76,16 @@
               }
             ],
             "enableCriteria": [],
-            "validationRules": [
-              "Required"
-            ]
+            "validationRules": ["Required"]
+          },
+          {
+            "externalQuestionId": "questionToBeHardCoded",
+            "questionText": "Hardcoded question lala",
+            "helpText": "",
+            "answerType": "Hardcoded",
+            "answerOptions": [],
+            "enableCriteria": [],
+            "validationRules": []
           }
         ]
       }

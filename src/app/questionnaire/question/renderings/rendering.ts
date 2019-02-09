@@ -12,6 +12,7 @@ export class Rendering {
   public static radio = new Rendering('RADIO');
   public static combobox = new Rendering('COMBOBOX');
   public static checkbox = new Rendering('CHECKBOX');
+  public static hardcoded = new Rendering('HARDCODED');
 
   private constructor(private name: string) {
     Rendering.renderingsMap.set(name, this);

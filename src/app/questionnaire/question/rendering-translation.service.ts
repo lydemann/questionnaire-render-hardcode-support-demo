@@ -57,6 +57,19 @@ class RenderingTranslationRule {
     }
   );
 
+  public static hardcodedRenderingRule = new RenderingTranslationRule(
+    Rendering.hardcoded,
+    (question: Question) => {
+      if (
+        question.answerType.toUpperCase() === Rendering.hardcoded.toString()
+      ) {
+        return true;
+      }
+
+      return false;
+    }
+  );
+
   private constructor(
     public rendering: Rendering,
     public booleanExp: (Question) => boolean
@@ -72,7 +85,8 @@ export class RenderingTranslationService {
     RenderingTranslationRule.freetextRenderingRule,
     RenderingTranslationRule.radioRenderingRule,
     RenderingTranslationRule.checkboxRenderingRule,
-    RenderingTranslationRule.comboboxRenderingRule
+    RenderingTranslationRule.comboboxRenderingRule,
+    RenderingTranslationRule.hardcodedRenderingRule
   ];
 
   getRenderingForQuestion(question: Question): Rendering {

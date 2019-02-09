@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup } from '@angular/forms/';
-import { Question } from '../questionnaire.model';
+import { Question } from '@app/questionnaire.model';
 import { QuestionComponent } from './question.component';
 
 describe('QuestionComponent', () => {

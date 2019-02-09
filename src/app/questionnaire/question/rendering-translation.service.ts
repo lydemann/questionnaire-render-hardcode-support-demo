@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Question } from '../questionnaire.model';
+import { Question } from '@app/questionnaire.model';
 import { Rendering } from './renderings/rendering';
 export const comboboxOptionsThreshold = 7;
 

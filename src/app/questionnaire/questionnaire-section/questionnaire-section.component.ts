@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
-import { QuestionSection, Question } from '../questionnaire.model';
-import { FormGroup } from '@angular/forms';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Question, QuestionSection } from '@app/questionnaire.model';
 import { QuestionFormGeneratorService } from './question-form-generator.service';
 
 @Component({
@@ -11,14 +9,16 @@ import { QuestionFormGeneratorService } from './question-form-generator.service'
   styleUrls: ['./questionnaire-section.component.css']
 })
 export class QuestionnaireSectionComponent implements OnInit {
-
   @Input() section: QuestionSection = new QuestionSection();
 
   get sectionQuestions(): Question[] {
     return this.section.questions;
   }
 
-  constructor(private formBuilder: FormBuilder, private questionControlService: QuestionFormGeneratorService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private questionControlService: QuestionFormGeneratorService
+  ) {}
 
   questionsForm: FormGroup;
 
@@ -27,6 +27,8 @@ export class QuestionnaireSectionComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.questionsForm = this.questionControlService.getQuestionsFormGroup(this.sectionQuestions);
+    this.questionsForm = this.questionControlService.getQuestionsFormGroup(
+      this.sectionQuestions
+    );
   }
 }

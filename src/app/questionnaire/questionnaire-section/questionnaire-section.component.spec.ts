@@ -1,12 +1,12 @@
-import { Questionnaire, QuestionnaireRoot } from './../questionnaire.model';
-import { QuestionFormGeneratorService } from './question-form-generator.service';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { QuestionComponent } from './../question/question.component';
-import { QuestionnaireComponent } from './../questionnaire/questionnaire.component';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { QuestionnaireSectionComponent } from './questionnaire-section.component';
+import { QuestionnaireRoot } from '@app/questionnaire.model.js';
 import * as mockQuestionnaireJson from '../questionnaire-mock.json';
+import { QuestionnaireComponent } from '../questionnaire.component.js';
+import { QuestionComponent } from './../question/question.component';
+import { QuestionFormGeneratorService } from './question-form-generator.service';
+import { QuestionnaireSectionComponent } from './questionnaire-section.component';
 
 describe('QuestionnaireSectionComponent', () => {
   let component: QuestionnaireSectionComponent;
@@ -19,13 +19,9 @@ describe('QuestionnaireSectionComponent', () => {
         QuestionnaireComponent,
         QuestionComponent
       ],
-      imports: [
-        BrowserModule,
-        ReactiveFormsModule
-      ],
-      providers: [QuestionFormGeneratorService],
-    })
-    .compileComponents();
+      imports: [BrowserModule, ReactiveFormsModule],
+      providers: [QuestionFormGeneratorService]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
